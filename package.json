@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://218r1a7230.github.io/Praneeth-kalyan-portfolio",
+  "homepage": "https://218r1a7230.github.io/praneeth-kalyan-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
