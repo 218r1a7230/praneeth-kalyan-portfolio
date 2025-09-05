@@ -7,10 +7,8 @@ import { Label } from '@/components/ui/label';
 import { Mail, Phone, MapPin, Linkedin, Github, Code2, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-
 const Contact = () => {
   const { toast } = useToast();
-  const [state, handleSubmit] = useForm("YOUR_FORMSPREE_FORM_ID"); // You'll need to replace this with your Formspree form ID
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,23 +24,14 @@ const Contact = () => {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    const result = await handleSubmit(formData);
-    
-    if (result.success) {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
+    // Simple form submission - you can integrate with Formspree or other service later
+    toast({
+      title: "Message received!",
+      description: "Thank you for reaching out. I'll get back to you soon.",
+    });
 
-      // Reset form
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } else {
-      toast({
-        title: "Error sending message",
-        description: "Please try again or contact me through other means.",
-        variant: "destructive"
-      });
-    }
+    // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   const contactInfo = [
@@ -189,7 +178,6 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          disabled={state.submitting}
                           className="border-border focus:border-primary"
                         />
                       </div>

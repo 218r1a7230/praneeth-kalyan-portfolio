@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/Praneeth-portfolio/", // 👈 important for GitHub Pages
+  base: "/Praneeth-kalyan-portfolio", // For GitHub Pages deployment
   server: {
     port: 8080,
   },
